@@ -78,6 +78,12 @@ return {
                 augroup END
                 ]]
 
+        vim.api.nvim_command(
+            'autocmd FileType c map <F8> :w <CR> :terminal gcc % -o %< && ./%< <CR> :startinsert <CR>')
+
+        vim.api.nvim_command(
+            'autocmd FileType c map <F10> :terminal ./%< <CR> :startinsert <CR>')
+
         if vim.g.neovide then
             vim.o.guifont = "FiraCode Nerd Font,Symbols Nerd Font:h11"
         end
