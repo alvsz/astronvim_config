@@ -8,7 +8,14 @@ return {
                 transparent_background = false
             })
         end
-    }, {'elkowar/yuck.vim', lazy = false}, {'ron-rs/ron.vim', lazy = false}
+    },
+    {
+        "lervag/vimtex",
+        init = function()
+            -- Use init for configuration, don't use the more common "config".
+        end
+    },
+    {'elkowar/yuck.vim', lazy = false}, {'ron-rs/ron.vim', lazy = false}
     -- You can also add new plugins here as well:
     -- Add plugins, the lazy syntax
     -- "andweeb/presence.nvim",
