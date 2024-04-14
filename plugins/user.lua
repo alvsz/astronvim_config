@@ -9,6 +9,7 @@ return {
             })
         end
     },
+ 
     {
         "lervag/vimtex",
         init = function()
