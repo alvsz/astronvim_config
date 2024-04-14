@@ -88,6 +88,10 @@ return {
             vim.o.guifont = "FiraCode Nerd Font,Symbols Nerd Font:h11"
         end
 
+        for i=1,9 do
+              vim.api.nvim_set_keymap('n', '<A-' .. i .. '>', ':buffer ' .. i .. '<CR>', { noremap = true, silent = true })
+        end
+
         require('neo-tree').setup {
             filesystem = {
                 filtered_items = {
